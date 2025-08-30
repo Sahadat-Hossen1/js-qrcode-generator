@@ -4,10 +4,11 @@ const qrcode_container = document.getElementById("qrcode-container");
 const placeholder_text = document.getElementById("placeholder-text");
 
 const generateQRCode = () => {
-  // alert()
+  
 
   try {
     const text = textInput.value.trim();
+    qrcode_container.innerHTML=""
     if (text === "") {
       placeholder_text.classList.add("text-red-800");
       placeholder_text.innerText = "please write somethings";
@@ -21,7 +22,7 @@ const generateQRCode = () => {
       hight: 160,
       colorDark: "black",
       colorLight: "white",
-      correctLevel:QRCode.CorrectLevel.M
+      correctLevel:QRCode.CorrectLevel.H
     //   correctLevel: QRCode.CorrectLevel.H,
     });
     textInput.value=''
