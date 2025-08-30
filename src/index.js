@@ -31,4 +31,8 @@ const generateQRCode = () => {
 };
 
 generateBtn.addEventListener("click", generateQRCode);
-textInput.addEventListener('keydown',generateQRCode)
+textInput.addEventListener('keydown',(e)=>{
+    if (e.key ==="Enter") {
+        generateQRCode()
+    }
+})
